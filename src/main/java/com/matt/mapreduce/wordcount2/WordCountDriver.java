@@ -1,4 +1,4 @@
-package com.matt.mapreduce.wordcount;
+package com.matt.mapreduce.wordcount2;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -11,12 +11,14 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 /**
+ * 动态从终端输入
  * @author matt
  * @create 2021-12-15 1:29
  */
 public class WordCountDriver {
 
 
+    // hadoop jar wc.jar com.matt.mapreduce.wordcount2.WordCountDriver /input /output
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 
 
@@ -39,8 +41,9 @@ public class WordCountDriver {
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
         // 6 设置输入路径 输出路径
-        FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\cc"));
+        // 动态从终端输入
+        FileInputFormat.setInputPaths(job, new Path(args[0]));
+        FileOutputFormat.setOutputPath(job, new Path(args[1]));
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);

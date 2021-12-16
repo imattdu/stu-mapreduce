@@ -1,4 +1,4 @@
-package com.matt.mapreduce.wordcount;
+package com.matt.mapreduce.partitioner;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
@@ -40,7 +40,11 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
         // 6 设置输入路径 输出路径
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\cc"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\partitoner"));
+
+        job.setNumReduceTasks(2);
+
+
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);
