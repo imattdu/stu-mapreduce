@@ -1,0 +1,22 @@
+package com.matt.mapreduce.outputformat;
+
+import org.apache.hadoop.io.NullWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import java.io.IOException;
+
+/**
+ * @author matt
+ * @create 2021-12-21 23:13
+ */
+public class LogReducer extends Reducer<Text, NullWritable, Text, NullWritable> {
+
+    // www.baidu.com
+    @Override
+    protected void reduce(Text key, Iterable<NullWritable> values, Context context) throws IOException, InterruptedException {
+        for (NullWritable value : values) {
+            context.write(key, NullWritable.get());
+        }
+    }
+}
