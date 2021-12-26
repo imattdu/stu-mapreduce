@@ -1,9 +1,10 @@
-package com.matt.mapreduce.wordcount;
+package com.matt.mapreduce.yasuo;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.compress.BZip2Codec;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
@@ -40,7 +41,13 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
         // 6 设置输入路径 输出路径
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\wc1"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\ddd"));
+
+        // 设置 reduce 端输出压缩开启
+        FileOutputFormat.setCompressOutput(job, true);
+// 设置压缩的方式
+        FileOutputFormat.setOutputCompressorClass(job, BZip2Codec.class);
+
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);
