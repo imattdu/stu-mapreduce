@@ -1,1 +1,1 @@
-# study-mapreduce
+# stu-mapreduce
