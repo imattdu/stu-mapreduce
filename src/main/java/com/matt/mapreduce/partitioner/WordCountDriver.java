@@ -44,11 +44,9 @@ public class WordCountDriver {
 
         job.setNumReduceTasks(2);
 
-
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);
-
         System.exit(result ? 0 : 1);
     }
 

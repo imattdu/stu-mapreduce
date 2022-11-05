@@ -30,13 +30,11 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         //aa
         //bb
         String[] words = line.split(" ");
-
         // 3.循环写出
         for (String word : words) {
             outK = new Text(word);
             // 写出
             context.write(outK, outV);
-
         }
     }
 }

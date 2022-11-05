@@ -11,15 +11,13 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import java.io.IOException;
 
 /**
+ * this is
+ *
  * @author matt
- * @create 2021-12-15 1:29
+ * @since 2021-12-15 1:29
  */
 public class WordCountDriver {
-
-
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
-
-
         // 1.获取jod
         Configuration conf = new Configuration();
         Job job = Job.getInstance(conf);
@@ -40,7 +38,7 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
         // 6 设置输入路径 输出路径
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputword"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\wc1"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\wc21"));
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);

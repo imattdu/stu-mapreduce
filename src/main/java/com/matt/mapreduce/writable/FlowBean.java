@@ -75,8 +75,6 @@ public class FlowBean implements Writable {
 
     // 反射使用
     public FlowBean() {
-
-
     }
 
     //1 12  13

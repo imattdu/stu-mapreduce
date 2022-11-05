@@ -11,7 +11,7 @@ import java.io.IOException;
 
 /**
  * @author matt
- * @create 2021-12-16 1:13
+ * @version 2021-12-16 1:13
  */
 public class FlowDriver {
 
@@ -34,10 +34,8 @@ public class FlowDriver {
 
         // D:\matt\workspace\idea\hadoop\input\inputflow\phone_data.txt
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputflow\\phone_data.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\a2"));
-
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\a21"));
         boolean res = job.waitForCompletion(true);
-
         System.exit(res ? 0 : 1);
 
     }

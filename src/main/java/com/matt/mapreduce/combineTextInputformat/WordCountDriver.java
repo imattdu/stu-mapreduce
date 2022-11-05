@@ -41,7 +41,7 @@ public class WordCountDriver {
         job.setOutputValueClass(IntWritable.class);
         // 6 设置输入路径 输出路径
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputcombinetextinputformat"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\cccombinetext1"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\cccombinetext2"));
 
 
         // 如果不设置 InputFormat，它默认用的是 TextInputFormat.class
