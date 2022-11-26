@@ -33,6 +33,5 @@ public class WebLogMappper extends Mapper<LongWritable, Text, Text, NullWritable
             return true;
         }
         return false;
-
     }
 }

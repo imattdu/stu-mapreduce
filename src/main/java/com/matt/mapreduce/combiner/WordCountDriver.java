@@ -43,7 +43,8 @@ public class WordCountDriver {
         FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\combiner1"));
 
 
-        job.setCombinerClass(WordCountCombiner.class);
+        //job.setCombinerClass(WordCountCombiner.class);
+        job.setCombinerClass(WordCountReducer.class);
         // 7 提交job
         // 监控并打印job信息
         boolean result = job.waitForCompletion(true);

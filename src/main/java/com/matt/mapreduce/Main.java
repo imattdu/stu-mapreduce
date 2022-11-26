@@ -10,13 +10,9 @@ import java.util.zip.CheckedOutputStream;
  */
 public class Main {
 
-
     public static void main(String[] args) {
-        String s1 = "aa bb cc";
-        String[] split = s1.split(" ");
-        for (String s : split) {
+        for (String s: args) {
             System.out.println(s);
         }
     }
-
 }

@@ -34,7 +34,7 @@ public class FlowDriver {
 
         // D:\matt\workspace\idea\hadoop\input\inputflow\phone_data.txt
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputflow\\phone_data.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\a21"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\w1"));
         boolean res = job.waitForCompletion(true);
         System.exit(res ? 0 : 1);
 

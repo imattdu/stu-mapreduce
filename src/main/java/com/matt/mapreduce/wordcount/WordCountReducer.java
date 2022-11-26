@@ -17,8 +17,6 @@ import java.io.IOException;
 public class WordCountReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
 
     // 每一种key会调用一次 a (1, 1, 1)
-
-
     /**
      * 功能：
      * @author matt

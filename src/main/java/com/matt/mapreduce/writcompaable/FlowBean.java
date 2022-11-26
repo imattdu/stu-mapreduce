@@ -76,8 +76,6 @@ public class FlowBean implements WritableComparable<FlowBean> {
 
     // 反射使用
     public FlowBean() {
-
-
     }
 
 

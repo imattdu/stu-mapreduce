@@ -36,7 +36,6 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
             outK = new Text(word);
             // 写出
             context.write(outK, outV);
-
         }
     }
 }

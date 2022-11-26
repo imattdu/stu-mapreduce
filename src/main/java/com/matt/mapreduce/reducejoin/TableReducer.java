@@ -24,7 +24,6 @@ public class TableReducer extends Reducer<Text, TableBean, TableBean, NullWritab
 
         // value 会公用一个地址
         for (TableBean value : values) {
-
             if ("order".equals(value.getFlag())) {
                 TableBean tmpTableBean = new TableBean();
                 try {
@@ -49,6 +48,5 @@ public class TableReducer extends Reducer<Text, TableBean, TableBean, NullWritab
             orderBean.setPname(pdBean.getPname());
             context.write(orderBean, NullWritable.get());
         }
-
     }
 }

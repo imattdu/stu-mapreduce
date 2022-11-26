@@ -20,6 +20,7 @@ public class TableDriver {
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
         Job job = Job.getInstance(new Configuration());
         job.setJarByClass(TableDriver.class);
+
         job.setMapperClass(TableMapper.class);
         job.setReducerClass(TableReducer.class);
         job.setMapOutputKeyClass(Text.class);
@@ -27,7 +28,8 @@ public class TableDriver {
         job.setOutputKeyClass(TableBean.class);
         job.setOutputValueClass(NullWritable.class);
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputtable"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\table1"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\3333"));
+
         boolean b = job.waitForCompletion(true);
         System.exit(b ? 0 : 1);
     }

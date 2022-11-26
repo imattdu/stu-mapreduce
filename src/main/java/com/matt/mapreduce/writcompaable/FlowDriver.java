@@ -33,8 +33,8 @@ public class FlowDriver {
         // D:\matt\workspace\idea\hadoop\input\inputflow\phone_data.txt
 
         // D:\matt\workspace\idea\hadoop\input\inputflow\phone_data.txt
-        FileInputFormat.setInputPaths(job, new Path("D:\\var\\mr\\input"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\writablecomparable3111"));
+        FileInputFormat.setInputPaths(job, new Path("D:\\var\\mr\\w1"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\wc"));
 
         boolean res = job.waitForCompletion(true);
 

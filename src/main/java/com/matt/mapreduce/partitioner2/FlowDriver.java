@@ -34,7 +34,7 @@ public class FlowDriver {
 
         // D:\matt\workspace\idea\hadoop\input\inputflow\phone_data.txt
         FileInputFormat.setInputPaths(job, new Path("D:\\matt\\workspace\\idea\\hadoop\\input\\inputflow\\phone_data.txt"));
-        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\partitioner216"));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\var\\mr\\12"));
 
         // 设置分区
         job.setPartitionerClass(ProvincePartitioner.class);

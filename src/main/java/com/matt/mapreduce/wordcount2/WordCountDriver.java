@@ -17,7 +17,6 @@ import java.io.IOException;
  */
 public class WordCountDriver {
 
-
     // hadoop jar wc.jar com.matt.mapreduce.wordcount2.WordCountDriver /input /output
     public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 

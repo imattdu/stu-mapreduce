@@ -12,10 +12,9 @@ import java.io.IOException;
  */
 public class TableBean implements Writable {
 
-
     private String id; //订单 id
     private String pid; //产品 id
-    private int amount; //产品数量
+    private Integer amount; //产品数量
     private String pname; //产品名称
     private String flag; //判断是 order 表还是 pd 表的标志字段
 
@@ -65,7 +64,7 @@ public class TableBean implements Writable {
     // 打印的使用使用这个方法
     @Override
     public String toString() {
-        return id + '\t' + pname + '\t' + amount;
+        return this.id + " " + this.pname + "\t" + this.amount;
     }
 
     @Override
